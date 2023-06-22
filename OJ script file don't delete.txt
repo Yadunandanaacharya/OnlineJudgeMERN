@@ -1,0 +1,36 @@
+========To create new data base ONLINEJUDGE
+use ONLINEJUDGE
+show dbs
+show collections
+
+db.createCollection('OJ1_USERS')
+db.createCollection('OJ1_PROBLEMS')
+db.createCollection('OJ1_SOLUTIONS')
+db.createCollection('OJ1_TEST_CASES')
+db.createCollection('OJ1_SUBMISSIONS')
+
+=========
+
+
+
+===========insert data to OJ1_USERS collections below is first document
+db.OJ1_USERS.insert({_id:1,'FUSER_ID': 1,'FUSER_NAME': 'Santhosh','FEMAIL': 'santhosh@mail.com','FPASSWORD':'1234'})
+=========
+
+===========insert data to OJ1_PROBLEMS collections below is first document
+db.OJ1_PROBLEMS.insert({_id:1,'FPRBLM_ID': 1,'FPRBLM_NAME': 'Add 2 numbers','FPRBLM_DESC': 'You're given x and y add them and return sum of them','FDIFFICULT_LEVEL':'easy','FTIME_LIMIT':'500 sec','FMEMORY_LIMIT':'4096 mb' })
+
+=========
+
+===========insert data to OJ1_SOLUTIONS collections below is first document
+db.OJ1_SOLUTIONS.insert({_id:1,'FSOLUTION_ID': 1,'FUSER_ID': 1, 'FPRBLM_ID': 1, 'FCODE':'return Math.sum(x+y)','FLANGUAGE':'java' })
+=========
+
+===========insert data to OJ1_TEST_CASES collections below is first document
+db.OJ1_TEST_CASES.insert({'FTESTCASE_ID': 1,'FPRBLM_ID': 1, 'FINPUT': 'x=2 and y=3', 'FEXPECTED_OUTPUT':'5', })
+=========
+
+===========insert data to OJ1_SUBMISSIONS collections below is first document
+db.OJ1_SUBMISSIONS.insert({ 'FSUBMISSION_ID': 1,'FSOLUTION_ID': 'Santhosh','FTESTCASE_ID': 'santhosh@mail.com','FINPUT':'500 sec', 'FOUTPUT':'1234', 'FSTATUS':'4096 mb','FEXECUTION_TIME':4000
+ })
+=========
